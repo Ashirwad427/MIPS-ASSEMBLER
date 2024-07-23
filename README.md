@@ -32,29 +32,30 @@ Uses MIPS system calls for reading integers, printing integers, and printing str
  Here's a detailed breakdown of the program's functionality:
 
 Instruction and Register Mappings:
-
 instruction_mapping defines the opcodes for various MIPS instructions.
 register_mapping maps register names to their binary equivalents.
 add defines the addresses for specific labels used in jump instructions.
+
 Two's Complement Function:
-
 The twosComplement function calculates the two's complement of a value, used for negative immediate values.
-Instruction Assembly Function:
 
+Instruction Assembly Function:
 The assemble_instruction function takes a MIPS instruction as input, splits it into its components, and assembles it into machine code.
 It handles different instruction formats (I-format, J-format, R-format, and pseudo-instructions) and converts operands into their binary equivalents.
 For branching (beq) and immediate arithmetic instructions (addi), it calculates the immediate value considering the label addresses.
 For load (lw) and store (sw) instructions, it formats the immediate and register values appropriately.
 For the move pseudo-instruction, it assembles it as an add instruction with a zero source register.
 For jump (j) and set-less-than (slt) instructions, it formats the machine code based on the provided opcode and operands.
-Input File Reading and Label Counting:
 
+Input File Reading and Label Counting:
 The program reads the input .asm file containing MIPS assembly code.
 It processes the file to count lines and map labels to their line numbers for correct immediate value calculation in branch instructions.
+
 Assembly Process:
-
 The program reads the relevant lines of the assembly file, processes each line to generate machine code, and writes the binary and hexadecimal representation of the machine code to an output file.
-Output:
 
+Output:
 The assembled machine code is written to an output file (output.txt) and also printed to the console for verification.
+
+
 In summary, this program automates the process of converting MIPS assembly instructions into machine-readable code, considering various instruction formats and handling immediate value calculations for branch instructions.
