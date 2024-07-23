@@ -9,24 +9,23 @@ A small python & assembly based project which converts MIPS assembly instruction
 This MIPS assembly program is designed to read a specified number of integers from the user, store them in memory, and then sort them using the bubble sort algorithm. After sorting, the program outputs the sorted integers. Here’s a breakdown of the program’s functionality:
 
 Data Section:
-
 Defines various strings used for displaying prompts and messages to the user.
-Text Section:
 
+Text Section:
 Prompts the user to enter the number of integers, starting address of inputs, and starting address of outputs.
 Reads these values from the terminal and stores them in registers $t1, $t2, and $t3 respectively.
 Prompts the user to enter the integers to be sorted, which are stored in memory starting from the address in $t2.
+
 Copying Inputs to Output Memory:
-
 Copies the unsorted integers from the input memory location to the output memory location.
+
 Bubble Sort Algorithm:
-
 Implements the bubble sort algorithm to sort the integers stored in the output memory location.
+
 Output Sorted Integers:
-
 Reads the sorted integers from the output memory location and prints them to the terminal.
-System Calls:
 
+System Calls:
 Uses MIPS system calls for reading integers, printing integers, and printing strings.
 
 ### 2. MIPS Assembler in Python
